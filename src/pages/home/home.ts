@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams} from 'ionic-angular';
 
 import { AlphabetPage } from '../alphabet/alphabet';
 import { SentencePage } from '../sentence/sentence';
@@ -11,9 +11,11 @@ import { InfoPage } from '../info/info';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController) {
-
+  name: String;
+  discapacidad: String;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.name= navParams.get('name');
+    this.discapacidad = navParams.get('disp');
   }
   
   

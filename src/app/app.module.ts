@@ -21,9 +21,8 @@ import { LoginProvider } from '../providers/login/login';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCEN16Yevh_zCkq2nREpB7aJGgRA-tIQEE",
@@ -31,7 +30,9 @@ export const firebaseConfig = {
   databaseURL: "https://tesis-69389.firebaseio.com",
   projectId: "tesis-69389",
   storageBucket: "tesis-69389.appspot.com",
-  messagingSenderId: "773915078479"
+  messagingSenderId: "773915078479",
+  appId: "1:773915078479:web:73520b0db6be5877"
+
 };
 
 @NgModule({
@@ -51,10 +52,9 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireAuthModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule,
+    AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],  

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import {FormGroup, Validators,FormControl } from '@angular/forms';
 import {LoginProvider} from '../../providers/login/login'
+import {HomePage} from '../home/home'
 /**
  * Generated class for the LoginPage page.
  *
@@ -41,11 +42,14 @@ export class LoginPage {
       this.auth.loginUser(this.Form.controls['user'].value,this.Form.controls['password'].value)
         .then(user=>{
           //this.ShowToast('Bienvenido');
-          console.log("bienvenido");
+          this.auth.getUser().then(usr=>{
+            this.navCtrl.push(HomePage,{name: usr.nombre, disp: usr.discapacidad});
+          })
+          
         })
         .catch( err=>{
           //this.ShowToast('Usuario no registrado');
-          console.log("usuario no registrado");
+          console.log(err);
         })
     }
     else{

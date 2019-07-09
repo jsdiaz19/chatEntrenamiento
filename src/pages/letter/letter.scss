@@ -1,0 +1,204 @@
+page-letter {
+    
+    ion-header{
+        background: map-get($colors, primary);
+    }
+    
+  ion-content {
+    //background: url(../assets/imgs/chat-back.png) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    .item-md, .item-ios {
+      background: none;
+    }
+  }
+
+  .chat-message {
+    width: 80%;
+    min-height: 40px;
+    .right-bubble {
+        position: relative;
+        background: map-get($colors, primary);
+    }
+
+    .left-bubble {
+        position: relative;
+        background: map-get($colors, primary);
+    }
+  }
+  
+}
+
+
+.img{
+  margin-left: 25%;
+  height: 170px;
+  width: 170px;
+}
+
+
+.footer2{
+  height: 62%;
+  background: white;
+  ion-icon {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+
+.textMorse{
+  height: 15%;
+  background:#fff;
+  text-align: center;
+  border-radius: 10px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: map-get($colors, primary);
+  margin-top: 2px;
+
+  h1{
+    margin: 0;
+  }
+  
+  .messageTranslateH1{
+      padding-top: 15px;
+  }
+}
+
+
+.sendMorse{
+  height: 4em;
+  background: #55acee;
+  text-align: center;
+  padding: 3%;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.sendMorseText{
+  color: #fff;
+  display: inline;
+  margin-left: 10px;
+}
+
+.sendMorseIcon{
+  color: #fff;
+  margin-left: 45%;
+  font-size: 40px;
+  
+}
+
+
+.inputMorse{
+  height: 80%;
+  margin-top: 0px;
+}
+
+
+
+.inputMorseRight{
+  color: #fff;
+  height: 9em;
+  background: #55acee;
+  align-items: center;
+  padding-top: 20%;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #fff;
+
+  .icon{
+    position: absolute;
+    top: 22%;
+    left: 35%;
+    font-size: 60px;
+    
+  }
+}
+
+.inputMorseLeft{
+  color: #fff;
+  height: 9em;
+  background: #55acee;
+  padding-top: 20%;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #fff;
+  .icon{
+    position: absolute;
+    top: 22%;
+    left: 35%;
+    font-size: 60px;
+    
+  }
+}
+
+  .inputMorseSpace{
+    color: #fff;
+    height: 6em;
+    margin-top: 8 px;
+    background: #55acee ;
+    align-items: center;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #fff;
+  
+    .icon{
+      position: absolute;
+      font-size: 40px; 
+      left: 35%;
+      top: 13%;
+      
+      
+    }
+  }
+
+  .message {
+    p {
+      color: black;
+      font-size: 13px;
+      margin: 10px;
+      max-width: 95%;
+      min-width: 55%;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      padding: 10px 15px 10px 7px;
+      margin: 5px 0;
+      background: #ffffff;
+    }
+
+  }
+
+  .message.incoming {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    p {
+      color: black;
+      border-radius: 0 11px 11px 11px;
+      background: #ede2fd;
+    }
+  }
+
+  .message.outcoming {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    p {
+      color: white;
+      background: #4169E1;
+      border-radius: 11px 11px 0 11px;
+    }
+  }
+
+
+

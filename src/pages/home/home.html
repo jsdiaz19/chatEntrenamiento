@@ -1,14 +1,32 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+  
+  <ion-card (click)="goToInfo()">
+    <div class="info">
+      <h1 class="name" style="color:white; font-weight: bold">Jhony Alberto</h1>
+      <h2 class="message" style="color:white">Visual y Auditiva</h2>
+      <h3 class="message" style="color:white">puntaje: 120</h3>
+    </div>
+    
+  </ion-card>
+  
+  <ion-card (click)="goToAlphabet()">
+    <h1 class="alphabet" style="color:white">Alfabeto</h1>
+  </ion-card>
+  
+  <!--
+  <ion-card (click)="goToNumbers()">
+    <h1 class="numbers" style="color:white">Numeros</h1>
+  </ion-card>
+  -->
+  
+  <ion-card (click)="goToWords()">
+    <h1 class="words" style="color:white">Palabras</h1>
+  </ion-card>
+  
+  <ion-card (click)="goToSentence()">
+      <h1 class="sentence" style="color:white">Frases</h1>
+  </ion-card>
+  
+  
 </ion-content>

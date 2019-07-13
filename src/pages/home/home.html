@@ -1,17 +1,35 @@
 <ion-content padding>
+  <div >    
+    <ion-fab left bottom>
+      <button  (click)="UpList()" ion-fab>
+        <ion-icon name="arrow-up" style="zoom:2.0"></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-fab center bottom>
+      <button (click)="Enter()" ion-fab>
+        <ion-icon name="play" ></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-fab right bottom>
+      <button (click)="DownList()" ion-fab>
+        <ion-icon name="arrow-down"  style="zoom:2.0"></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+
   
-  
-  <ion-card (click)="goToInfo()">
-    <div class="info">
+  <ion-card (click)="goToInfo()" >
+    <div class="info" [ngStyle]="{ background: index==0 ? '#e1dddc': '#E67E22'}">
       <h1 class="name" style="color:white; font-weight: bold">{{name}}</h1>
       <h2 class="message" style="color:white">{{discapacidad}}</h2>
-      <!-- <h3 class="message" style="color:white">puntaje: 120</h3> -->
     </div>
     
   </ion-card>
   
-  <ion-card (click)="goToAlphabet()">
-    <h1 class="alphabet" style="color:white">Alfabeto</h1>
+  <ion-card (click)="goToAlphabet()" >
+    <h1 class="alphabet" [ngStyle]="{ background: index==1 ? '#e1dddc': '#2980B9'}" style="color:white">Alfabeto</h1>
   </ion-card>
   
   <!--
@@ -20,12 +38,12 @@
   </ion-card>
   -->
   
-  <ion-card (click)="goToWords()">
-    <h1 class="words" style="color:white">Palabras</h1>
+  <ion-card (click)="goToWords()" >
+    <h1 class="words" style="color:white" [ngStyle]="{ background: index==2 ? '#e1dddc': '#F1C40F'}">Palabras</h1>
   </ion-card>
   
-  <ion-card (click)="goToSentence()">
-      <h1 class="sentence" style="color:white">Frases</h1>
+  <ion-card (click)="goToSentence()" >
+      <h1 class="sentence" style="color:white" [ngStyle]="{ background: index==3 ? '#e1dddc': '#27AE60'}">Frases</h1>
   </ion-card>
   
   

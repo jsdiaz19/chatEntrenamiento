@@ -23,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { VibrationProvider } from '../providers/vibration/vibration';
+import { Vibration } from '@ionic-native/vibration';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCEN16Yevh_zCkq2nREpB7aJGgRA-tIQEE",
@@ -74,8 +76,10 @@ export const firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
+    Vibration,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LoginProvider
+    LoginProvider,
+    VibrationProvider
   ]
 })
 export class AppModule {}

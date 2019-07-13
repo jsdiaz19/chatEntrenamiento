@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import {VibrationProvider} from '../../providers/vibration/vibration'
 /**
  * Generated class for the LetterPage page.
  *
@@ -359,7 +359,7 @@ export class LetterPage {
       }
   };
     
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private vibration: VibrationProvider) {
     this.letter= this.navParams.get('letter');
     this.morse= this._ALPHABET_[ this.letter ];
     this.title = "La "+this.letter+" en morse es  "+this.morse;
@@ -416,9 +416,12 @@ export class LetterPage {
   }
 
   Morse(){
+    this.vibration.stopVibrate();
     var message = "";
     var mmCopy = [];
     if(this.message){
+      this.vibration.beginVibrate();
+      this.vibration.VibrateMessage(this.message);
       mmCopy = this.message.split(/\||\n|\s/g);
       for (var x = 0; x < mmCopy.length; x++) {
         if (mmCopy[x] !== ""){

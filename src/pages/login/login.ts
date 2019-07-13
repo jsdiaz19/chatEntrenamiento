@@ -41,11 +41,9 @@ export class LoginPage {
     if(!this.Form.invalid){
       this.auth.loginUser(this.Form.controls['user'].value,this.Form.controls['password'].value)
         .then(user=>{
-          //this.ShowToast('Bienvenido');
-          this.auth.getUser().then(usr=>{
-            this.navCtrl.push(HomePage,{name: usr.nombre, disp: usr.discapacidad});
+          this.auth.getUser().then(res=>{
+            this.navCtrl.push(HomePage,{name: res.nombre, disp: res.discapacidad});
           })
-          
         })
         .catch( err=>{
           //this.ShowToast('Usuario no registrado');

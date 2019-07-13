@@ -5,6 +5,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { resolve } from 'path';
 import { rejects } from 'assert';
 import { error } from 'util';
+import { HomePage} from '../../pages/home/home';
 
 
 /*
@@ -24,7 +25,7 @@ export interface User{
 }
 @Injectable()
 export class LoginProvider {
-  user: User;
+  User: User;
   constructor(private afAuth :  AngularFireAuth, private afDB: AngularFireDatabase) {
     console.log('Hello LoginProvider Provider');
   }
@@ -33,16 +34,17 @@ export class LoginProvider {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
     .then(user=>{ Promise.resolve(user)})
     .catch(error=> Promise.reject(error))
-  }
-  
+  }  
 
   getUser(){
     let receivedUser:any;
-    return new Promise( (resolve)=>{
+    return new Promise<User> (resolve=>{
       this.afDB.object('usuarios/'+this.afAuth.auth.currentUser.uid+"/info/").valueChanges().subscribe(user=>{
-        resolve(user);  
-      });
+        receivedUser=user;
+        this.User=receivedUser;
+        resolve(this.User);
     })
+  })
   }
 
   get Session(){

@@ -15,7 +15,7 @@ import { LetterPage } from '../letter/letter';
   templateUrl: 'alphabet.html',
 })
 export class AlphabetPage {
-
+  index: number = 0;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -27,4 +27,15 @@ export class AlphabetPage {
     this.navCtrl.push(LetterPage,{letter: letter});
   }
 
+  DownList(){
+    if(this.index<=26){ this.index+=1; }
+  }
+
+  UpList(){
+    if(this.index>=1){ this.index-=1; }
+  }
+
+  Enter(){
+    this.goToD(String.fromCharCode(65+this.index));
+  }
 }

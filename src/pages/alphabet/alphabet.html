@@ -8,112 +8,132 @@
 
 <ion-content>
   
+  <div >    
+    <ion-fab left bottom>
+      <button  (click)="UpList()" ion-fab>
+        <ion-icon name="arrow-up" style="zoom:2.0"></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-fab center bottom>
+      <button (click)="Enter()" ion-fab>
+        <ion-icon name="play" ></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-fab right bottom>
+      <button (click)="DownList()" ion-fab>
+        <ion-icon name="arrow-down"  style="zoom:2.0"></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+
   <ion-list>
-    <ion-item class="word_1" (click)="goToD('A')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==0 ? '#e1dddc': 'white'}" (click)="goToD('A')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; A &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .-</h1>
     </ion-item>
 
-    <ion-item class="word_2" (click)="goToD('B')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==1 ? '#e1dddc': 'white'}" (click)="goToD('B')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; B &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -...</h1>
     </ion-item>
 
-    <ion-item class="word_1" (click)="goToD('C')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==2 ? '#e1dddc': 'white'}" (click)="goToD('C')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; C &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -.-.</h1>
     </ion-item>
 
-    <ion-item class="word_2" (click)="goToD('D')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==3 ? '#e1dddc': 'white'}" (click)="goToD('D')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; D &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -..</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('E')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==4 ? '#e1dddc': 'white'}" (click)="goToD('E')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; E &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('F')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==5 ? '#e1dddc': 'white'}" (click)="goToD('F')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; F &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ..-.</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('G')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==6 ? '#e1dddc': 'white'}" (click)="goToD('G')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; G &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --.</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('H')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==7 ? '#e1dddc': 'white'}" (click)="goToD('H')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; H &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ....</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('I')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==8 ? '#e1dddc': 'white'}" (click)="goToD('I')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; I &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ..</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('J')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==9 ? '#e1dddc': 'white'}" (click)="goToD('J')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; J &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .---</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('K')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==10 ? '#e1dddc': 'white'}" (click)="goToD('K')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; K &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -.-</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('L')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==11 ? '#e1dddc': 'white'}" (click)="goToD('L')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; L &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .-..</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('M')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==12 ? '#e1dddc': 'white'}" (click)="goToD('M')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; M &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('N')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==13 ? '#e1dddc': 'white'}" (click)="goToD('N')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; N &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -.</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('Ñ')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==14 ? '#e1dddc': 'white'}" (click)="goToD('Ñ')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; Ñ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --.--</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('O')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==15 ? '#e1dddc': 'white'}" (click)="goToD('O')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; O &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ---</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('P')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==16 ? '#e1dddc': 'white'}" (click)="goToD('P')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; P &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .--.</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('Q')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==17 ? '#e1dddc': 'white'}" (click)="goToD('Q')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; Q &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --.-</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('R')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==18 ? '#e1dddc': 'white'}" (click)="goToD('R')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; R &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .-.</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('S')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==19 ? '#e1dddc': 'white'}" (click)="goToD('S')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; S &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('T')">
+    <ion-item class="word_1"  [ngStyle]="{ background: index==20 ? '#e1dddc': 'white'}" (click)="goToD('T')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; T &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('V')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==21 ? '#e1dddc': 'white'}" (click)="goToD('V')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; U &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ..-</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('V')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==22 ? '#e1dddc': 'white'}" (click)="goToD('V')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; V &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ...-</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('W')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==23 ? '#e1dddc': 'white'}" (click)="goToD('W')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; W &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .--</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('X')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==24 ? '#e1dddc': 'white'}" (click)="goToD('X')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; X &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -..-</h1>
     </ion-item>
     
-    <ion-item class="word_2" (click)="goToD('Y')">
+    <ion-item class="word_2" [ngStyle]="{ background: index==25 ? '#e1dddc': 'white'}" (click)="goToD('Y')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; Y &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -.--</h1>
     </ion-item>
     
-    <ion-item class="word_1" (click)="goToD('Z')">
+    <ion-item class="word_1" [ngStyle]="{ background: index==26 ? '#e1dddc': 'white'}" (click)="goToD('Z')">
       <h1 class="friend-name">&nbsp; &nbsp; &nbsp; Z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --..</h1>
     </ion-item>
     
